@@ -6,7 +6,7 @@
     <title>Appointments</title>
     <style>
         body {
-            background-color: #fcc6bb;
+            background-color: #82a5df;
         }
 
         h1 {
@@ -14,7 +14,7 @@
         }
 
         nav {
-            background-color: #ffe6e6;
+            background-color: #e6ebff;
             margin: 25px 50px;
             padding: 20px;
             font-weight: bold;
@@ -23,12 +23,28 @@
         .container {
             display: flex;
             height: 100%;
+            padding-left: 50px;
+        }
+
+       .bar {
+            background-color: #467ad5;
+            overflow: hidden;
+            font-size: 1.5pc;
+        }
+
+        .bar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
         }
 
         .loginContainer{
                 background-color: #fff;
-                padding: 20px 30px;
-                border-radius: 5px;
+                padding: 100px 100px;
+                border-radius: 30px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 width: 600px;
         
@@ -37,7 +53,7 @@
         #submitButton {
             width: 100%;
             padding: 10px;
-            background-color: #ffa285;
+            background-color: #467ad5;
             color: white;
             border: none;
             border-radius: 3px;
@@ -55,10 +71,10 @@
     </style>
 </head>
 <body>
-    <h1><i>Appointments</i></h1>
+    <h1 style="color: #fff;"><i>Appointments</i></h1>
     <nav class="bar">
-        <a href="#" id="appointmentsLink">Appointments</a>
         <a href="#" id="loginLink">Login</a>
+        <a href="#" id="appointmentsLink">Schedule</a>  
     </nav>
 
     <div class="container">
