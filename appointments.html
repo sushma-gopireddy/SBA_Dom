@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <style>
+        body {
+            background-color: #fcc6bb;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffe6e6;
+            margin: 25px 50px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .loginContainer{
+                background-color: #fff;
+                padding: 20px 30px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 600px;
+        
+        }
+
+        #submitButton {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffa285;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .formField {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }        
+
+    </style>
+</head>
+<body>
+    <h1><i>Appointments</i></h1>
+    <nav class="bar">
+        <a href="#" id="appointmentsLink">Appointments</a>
+        <a href="#" id="loginLink">Login</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="loginContainer">
+            <h2>Admin Login</h2>
+            <form action="" method="post" >
+                Username <input class="formField" type="text" id="username" name="username">
+                Password <input class="formField" type="password" id="password" name="password">
+                <input id="submitButton" type="submit" value="Login" onclick="return verifyLogin()">
+            </form>
+        </div>
+
+    </div>
+</table>
+<script>
+    
+    function verifyLogin() {
+        const u = document.getElementById('username').value;
+        const p = document.getElementById('password').value;
+        if (!u && !p) {
+            alert('Please enter both username and password.');
+            document.getElementById('username').focus();
+            return false;
+        }else if (!u) {
+            alert('Please enter your username.');
+            document.getElementById('username').focus();
+            return false;
+        } else if (!p) {
+            alert('Please enter your password.');
+            document.getElementById('password').focus();
+            return false;
+        }
+        alert('Login successful!');
+        return false;
+    }
+    
+
+</script>
+</body>
+</html>
