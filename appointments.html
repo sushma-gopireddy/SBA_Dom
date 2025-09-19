@@ -43,7 +43,7 @@
 
         .loginContainer{
                 background-color: #fff;
-                padding: 100px 100px;
+                padding: 10px 100px 100px 100px;
                 border-radius: 30px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 width: 600px;
@@ -70,7 +70,7 @@
         
         .scheduleContainer{
             background-color: #fff;
-            padding: 100px 100px;
+            padding: 10px 100px;
             border-radius: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 600px;
@@ -96,6 +96,7 @@
             padding: 10px;
             border-radius: 6px;
             background: #fff7f6;
+            display: inline-block
             
         }   
 
@@ -105,7 +106,7 @@
     <h1 style="color: #fff;"><i>Appointments</i></h1>
     <nav class="bar">
         <a href="#" id="loginLink">Login</a>
-        <a href="#" id="appointmentsLink">Schedule</a>  
+        <a href="#" id="scheduleLink">Schedule</a>  
     </nav>
 
     <div class="container">
@@ -127,17 +128,17 @@
             <div class="schedule">
                 <h2>Internal Team Meeting</h2>
                 <p>With <b>FrontEnd Team</b></p>
-                <p class="scheduleTime">9:00</p>
+                <p class="scheduleTime">@9:00 AM</p>
             </div>
             <div class="schedule">
                 <h2>Gather Business Requirements</h2>
                 <p>With <b>Person1, Person2</b></p>
-                <p class="scheduleTime">10:00</p>
+                <p class="scheduleTime">@10:00 AM</p>
             </div>
             <div class="schedule">
                 <h2>Meeting with QA</h2>
                 <p>With <b>QA Team</b></p>
-                <P class="scheduleTime">13:00</P>
+                <P class="scheduleTime">@13:00 PM</P>
             </div>
         </div>     
 
@@ -164,7 +165,27 @@
         alert('Login successful!');
         return false;
     }
+
+    const scheduleLink = document.getElementById("scheduleLink");
+    const loginLink = document.getElementById("loginLink");
+
+    const loginDiv = document.querySelector(".loginContainer");
+    const scheduleDiv = document.querySelector(".scheduleContainer");
+
+    loginLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        scheduleDiv.style.display = "none";
+        loginDiv.style.display = "block";
+    });
+
+    scheduleLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        scheduleDiv.style.display = "block";
+        loginDiv.style.display = "none";
+    });
     
+    loginDiv.style.display = "block";
+    scheduleDiv.style.display = "none";
 
 </script>
 </body>
