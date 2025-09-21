@@ -118,8 +118,8 @@
         <div class="scheduleContainer">
             <h2><i><b>Today's Appointments</b></i></h2>
             <div class="schedule-controls">
-                <button id="addDealBtn" type="button">Add Appointment</button>
-                <button id="removeDealBtn" type="button">Remove Last Appointment</button>
+                <button id="addAppointmentBtn" type="button">Add Appointment</button>
+                <button id="removeAppointmentBtn" type="button">Remove Last Appointment</button>
             </div>
             <hr>
             <div class="schedule">
@@ -183,6 +183,18 @@
     
     loginDiv.style.display = "block";
     scheduleDiv.style.display = "none";
+
+    const addAppointmentBtn = document.getElementById('addAppointmentBtn');
+    const removeAppointmentBtn = document.getElementById('removeAppointmentBtn');
+    const scheduleContainer = document.querySelector('.scheduleContainer');
+
+    addAppointmentBtn.addEventListener('click', function () {
+        alert("Add Button Clicked");
+    });
+
+    removeAppointmentBtn.addEventListener('click', function () {
+        alert("Remove Button Clicked");
+    });
 
 </script>
 </body>
