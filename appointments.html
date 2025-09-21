@@ -189,7 +189,16 @@
     const scheduleContainer = document.querySelector('.scheduleContainer');
 
     addAppointmentBtn.addEventListener('click', function () {
-        alert("Add Button Clicked");
+        const subject = prompt('Enter Meeting Subject:');
+        if (!subject) return;
+        const meeting_with = prompt('Enter Meeting With:') || '';
+        const meeting_time = prompt('Enter Meeting Time (e.g. 10:00 AM):') || '';
+        const div = document.createElement('div');
+        div.className = 'schedule';
+        div.innerHTML = '<h2>' + subject + '</h2>' +
+                        '<p>With <b> '+meeting_with+'</b> @ <b>' + meeting_time + '</b></p>' +
+                        '<hr>';
+        scheduleContainer.appendChild(div);       
     });
 
     removeAppointmentBtn.addEventListener('click', function () {
