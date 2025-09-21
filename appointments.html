@@ -203,6 +203,16 @@
 
     removeAppointmentBtn.addEventListener('click', function () {
         alert("Remove Button Clicked");
+        const schedules = couponContainer.querySelectorAll('.schedule');
+        if (schedules.length === 0) {
+            alert('No appointments to remove.');
+            return;
+        }
+        const last = schedules[schedules.length - 1];
+        const title = last.querySelector('h2') ? last.querySelector('h2').textContent : 'this appointment';
+        if (confirm('Remove last appointment: "' + title + '"?')) {
+            last.remove();
+        }
     });
 
 </script>
