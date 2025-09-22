@@ -206,13 +206,13 @@
         const schedules = scheduleContainer.querySelectorAll('.schedule');
         //alert(schedules.length)
         if (schedules.length === 0) {
-            alert('No appointments to remove.');
+            window.alert('No appointments to remove.');
             return;
         }
         const last = schedules[schedules.length - 1];
         const title = last.querySelector('h2') ? last.querySelector('h2').textContent : 'this appointment';
         //alert(title)
-        if (confirm('Remove last appointment: "' + title + '"?')) {
+        if (window.confirm('Remove last appointment: "' + title + '"?')) {
             last.remove();
         }
     });
